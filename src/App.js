@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [message, setMessage] = useState("Hello, Gokul!");
+
+  const handleClick = () => {
+    setMessage("You clicked the button! 🎉");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.container}>
+      <h1 style={styles.heading}>{message}</h1>
+      <button onClick={handleClick} style={styles.button}>
+        Click Me
+      </button>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    marginTop: '100px',
+  },
+  heading: {
+    color: '#333',
+  },
+  button: {
+    padding: '10px 20px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    fontSize: '16px',
+    border: 'none',
+    borderRadius: '8px',
+    cursor: 'pointer',
+  },
+};
 
 export default App;
