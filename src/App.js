@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 function App() {
-  const [message, setMessage] = useState("Hello, Gokul!");
+  const [message, setMessage] = useState("Hello, world!");
 
   const handleClick = () => {
-    setMessage("You clicked the button! 🎉");
+    setMessage("oops! u clicked it");
   };
 
   return (
